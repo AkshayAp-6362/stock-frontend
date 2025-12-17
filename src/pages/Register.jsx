@@ -11,8 +11,8 @@ function Register() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      await axios.post('http://localhost:5000/register', { name, email, password });
+    try {     
+await axios.post('https://stock-backend-1-fd5l.onrender.com/register', { name, email, password });', { name, email, password });
       alert('Registration Successful! Please Login.');
       navigate('/login');
     } catch (err) {
