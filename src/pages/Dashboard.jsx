@@ -26,7 +26,7 @@ function Dashboard({ user, onLogout }) {
   const handleTrade = async () => {
     const endpoint = action.type === 'BUY' ? '/buy' : '/sell';
     try {
-      const res = await axios.post(`http://localhost:5000${endpoint}`, {
+      const res = await axios.post(`https://stock-backend-1-fd5l.onrender.com`, {
         email: user.email,
         ticker: action.ticker,
         units: action.units
