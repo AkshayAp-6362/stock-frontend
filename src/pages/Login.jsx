@@ -11,7 +11,7 @@ function Login({ onLogin }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/login', { email, password });
+      const res = await axios.post('https://stock-backend-1-fd5l.onrender.com/login', { email, password });
       onLogin(res.data.user);
     } catch (err) {
       setError(err.response?.data?.error || 'Login failed');
