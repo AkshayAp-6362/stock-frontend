@@ -10,7 +10,8 @@ function Dashboard({ user, onLogout }) {
 
   // 1. WebSocket Connection for Real-Time Prices
   useEffect(() => {
-    const ws = new WebSocket('ws://localhost:5000');
+   // Notice we use 'wss://' for the WebSocket connection
+const ws = new WebSocket('wss://stock-backend-1-fd5l.onrender.com');
     
     ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
