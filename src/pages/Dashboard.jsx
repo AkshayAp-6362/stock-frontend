@@ -11,7 +11,7 @@ function Dashboard({ user, onLogout }) {
   // 1. WebSocket Connection for Real-Time Prices
   useEffect(() => {
    // Notice we use 'wss://' for the WebSocket connection
-const ws = new WebSocket('wss://stock-backend-1-fd5l.onrender.com');
+const ws = new WebSocket('wss://stock-backend-3-2we7.onrender.com');
     
     ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
@@ -27,7 +27,7 @@ const ws = new WebSocket('wss://stock-backend-1-fd5l.onrender.com');
   const handleTrade = async () => {
     const endpoint = action.type === 'BUY' ? '/buy' : '/sell';
     try {
-      const res = await axios.post(`https://stock-backend-1-fd5l.onrender.com`, {
+      const res = await axios.post(`https://stock-backend-3-2we7.onrender.com`, {
         email: user.email,
         ticker: action.ticker,
         units: action.units
