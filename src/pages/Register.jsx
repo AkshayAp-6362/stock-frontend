@@ -12,7 +12,7 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {     
-await axios.post('https://stock-backend-1-fd5l.onrender.com/register', { name, email, password });', { name, email, password });
+await axios.post('https://stock-backend-3-2we7.onrender.com', { name, email, password });', { name, email, password });
       alert('Registration Successful! Please Login.');
       navigate('/login');
     } catch (err) {
