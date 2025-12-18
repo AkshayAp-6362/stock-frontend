@@ -3,7 +3,7 @@
 A full-stack web application that simulates a real-time stock market. Users can register, manage a portfolio, and buy/sell stocks using virtual currency. The app features live price updates via WebSockets and a secure authentication system.
 
 ## 🚀 Live Demo
-* **Frontend (Vercel):** [Click Here to View App](https://stock-frontend88.vercel.app/login) *(Replace with your Vercel Link)*
+* **Frontend (Vercel):** [Click Here to View App](https://stock-frontend88.vercel.app/login) 
 * **Backend (Render):** [https://stock-backend-3-2we7.onrender.com](https://stock-backend-3-2we7.onrender.com)
 
 ---
