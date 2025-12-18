@@ -27,11 +27,12 @@ const ws = new WebSocket('wss://stock-backend-3-2we7.onrender.com');
   const handleTrade = async () => {
     const endpoint = action.type === 'BUY' ? '/buy' : '/sell';
     try {
-      const res = await axios.post(`https://stock-backend-3-2we7.onrender.com`, {
-        email: user.email,
-        ticker: action.ticker,
-        units: action.units
-      });
+    // ✅ Add ${endpoint} at the end
+const res = await axios.post(`https://stock-backend-3-2we7.onrender.com${endpoint}`, {
+  email: user.email,
+  ticker: action.ticker,
+  units: action.units
+});
       // Update local state with new portfolio data from server
       setPortfolio(res.data.portfolio);
       setBalance(res.data.balance);
